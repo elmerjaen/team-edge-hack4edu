@@ -49,7 +49,6 @@ export const drawRect = ({
     if (boxes[i] && classes[i] && (scores[i] || 0) > threshold) {
       const [y, x, height, width] = boxes[i] as number[];
       const text = classes[i] as keyof typeof labelMap;
-      console.log(labelMap[text].name);
 
       if (canvasContext) {
         canvasContext.strokeStyle = labelMap[text].color;

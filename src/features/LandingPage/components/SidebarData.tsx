@@ -7,12 +7,6 @@ const SidebarData = [
     icon: <FaIcons.FaHome />,
     cName: 'nav-text'
   }
-  // {
-  //   title: 'Aprender Vocales',
-  //   path: '/aprender-vocales',
-  //   icon: <FaIcons.FaFont />,
-  //   cName: 'nav-text'
-  // }
 ];
 
 export default SidebarData;

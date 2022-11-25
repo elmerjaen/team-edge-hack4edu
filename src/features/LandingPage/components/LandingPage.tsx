@@ -4,8 +4,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import Particles from 'react-tsparticles';
-// import particlesConfig from './particlesConfig.json';
 
 const boxVariant = {
   visible: {
@@ -30,19 +28,19 @@ const Box = ({ num }) => {
 
   return (
     <motion.div
-      className="absolute text-center my-4 mx-32"
+      className="absolute text-center my-2 mx-32"
       ref={ref}
       variants={boxVariant}
       initial="hidden"
       animate={control}
     >
-      <h1 className="text-black py-4 text-2xl font-bold">
+      <h1 className="text-black py-2 text-2xl font-bold">
         Equipo de Investigación
       </h1>
       <div className="relative flex space-x-6 mx-10 my-4">
         <div className="relative flex space-x-4 text-center items-center">
           <img
-            src="src/images/profile-elmer.png"
+            src="https://firebasestorage.googleapis.com/v0/b/team-edge.appspot.com/o/projectFiles%2Fprofile-pic.png?alt=media&token=c06e53c4-056a-45b6-a30e-cd0ee649569a"
             className="w-24 h-24"
             alt=""
           />
@@ -55,7 +53,7 @@ const Box = ({ num }) => {
         </div>
         <div className="relative flex space-x-4 text-center items-center">
           <img
-            src="src\images\profile-gerardo.png"
+            src="https://firebasestorage.googleapis.com/v0/b/team-edge.appspot.com/o/projectFiles%2Fprofile-gerardo.png?alt=media&token=dc1445b2-46b5-4909-a712-e6cbb582c08b"
             className="w-24 h-24"
             alt=""
           />
@@ -68,7 +66,7 @@ const Box = ({ num }) => {
         </div>
         <div className="relative flex space-x-4 text-center items-center">
           <img
-            src="src/images/profile-castillo.png"
+            src="https://firebasestorage.googleapis.com/v0/b/team-edge.appspot.com/o/projectFiles%2Fprofile-castillo.png?alt=media&token=1dd306ef-7ee4-4843-9cd5-a2969d352587"
             className="w-24 h-24"
             alt=""
           />
@@ -81,7 +79,7 @@ const Box = ({ num }) => {
         </div>
         <div className="relative flex space-x-4 text-center items-center">
           <img
-            src="src/images/profile-dante.png"
+            src="https://firebasestorage.googleapis.com/v0/b/team-edge.appspot.com/o/projectFiles%2Fprofile-dante.png?alt=media&token=eafc6179-7a11-46bd-b79f-f9ce517b3d16"
             className="w-24 h-24"
             alt=""
           />
@@ -98,25 +96,28 @@ const Box = ({ num }) => {
 };
 
 const LandingPage = () => (
-  <>
-    {/* <Particles params={particlesConfig} /> */}
-    <div className="relative mt-20 text-center text-black pb-40">
-      <h1 className="text-9xl font-medium tracking-widest">TUTOR</h1>
-      <p className="text-2xl tracking-normal">
-        Tutor inteligente para la enseñanza de la riqueza cultural
-      </p>
-      <p className="text-2xl tracking-normal">en Panamá y Latinoamerica</p>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="relative border-4 border-black px-8 py-3 text-black transition-colors hover:bg-black hover:text-white block mx-auto mt-10"
-        type="button"
-      >
-        <Link to="/object-detection">EMPEZAR</Link>
-      </motion.button>
-      <Box num={1} />
+  <div className="relative mt-20 text-center text-black pb-40">
+    <div className="flex justify-center">
+      <img
+        src="src/images/eonfolk.png"
+        className="flex justify-center h-24"
+        alt=""
+      />
     </div>
-  </>
+    <p className="text-2xl tracking-normal">
+      Tutor inteligente para la enseñanza de la riqueza cultural
+    </p>
+    <p className="text-2xl tracking-normal">en Panamá y Latinoamerica</p>
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className="relative border-4 border-black px-8 py-3 text-black transition-colors hover:text-white block mx-auto mt-10"
+      type="button"
+    >
+      <Link to="/object-detection">EMPEZAR</Link>
+    </motion.button>
+    <Box num={1} />
+  </div>
 );
 
 export default LandingPage;
