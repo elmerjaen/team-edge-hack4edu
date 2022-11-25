@@ -13,4 +13,4 @@
 
 - Azure Cognitive Services
 - ReactJS
-- Python
+- Firebase
